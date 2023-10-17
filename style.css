@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    font-family: 'NewFont', sans-serif;  
+    font-size: 1.1rem;
+    color: black;
+}
+/***********************************************Below Section is for Navigation Bar*****************************************/
+.nav-bar{
+    height: 70px;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+}   
+.sub-nav1{
+    width: max-content;
+    margin-left: 1rem;
+    align-items: center;
+    white-space: nowrap; /* New Learning- Prevent line breaks even when the screen with reduces. */
+}
+.sub-nav2{
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 2rem;
+}
+.sub-nav2 p {
+    cursor: pointer;
+}
+.side-bar-icon{
+    display: none;
+}
+/* *********************************************This section is for Home section*********************************************** */
+.home{
+    background-color: #ececec;    
+    height: 700px;
+    background-image: url('back2.jpg'); 
+    background-size: cover; 
+    background-position: center center; /*This Centers the background image horizontally and vertically */
+    background-repeat: no-repeat; /* This prevents the image from repeating */
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.background-img{
+    z-index: 0;
+}
+.Sub-home{
+    justify-content: center;
+    
+    margin: 150px 20px;
+    z-index: 1;
+
+}
+.animated-text {
+    font-size: 2.5rem;
+    animation: scaleAnimation 2s ease infinite alternate; 
+}
+
+@keyframes scaleAnimation {
+    0% {
+        transform: scale(1); 
+    }
+    100% {
+        transform: scale(1.1); 
+    }
+}
+
+.head1{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+h1{
+    font-size: 2.5rem;
+}
+
+.head2 p {
+    font-size: 1.5rem;
+}
+.head2{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;  /* New Learning - This property is used for text align. lund  */ 
+}
+.project-btn-div{
+    display: flex;
+    margin-top: 4rem;
+    justify-content: center; 
+}
+.project-btn{
+    width: 10rem;
+    height: 3rem;
+    border-style: solid;
+    background-color: #000000;
+    color: white;
+    cursor:pointer;
+    transition: 0.8s;
+    
+    
+}
+.project-btn:hover{
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 10px white;
+}
+
+
+/******************************************Below Section is for 'About Me' Section**********************************************/ 
+#about{
+    width: 100%;
+    height: fit-content;
+    background-color: #ececec;    
+    padding-top: 50px;
+    
+}
+.child-about{
+    margin-left: 30px;
+    margin-right: 30px;
+    height: fit-content;
+}
+.child-1{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-bottom: 40px;
+}
+
+.about-head{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+#Dash{
+    width: 30%;
+    height: 10px;
+}
+#Dash hr{
+    display: block;
+    margin: 0 auto;
+}
+.about-1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    text-align:center;
+}
+.info-container{
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+}
+.info1{
+    max-width: 600px;
+    margin-right: 30px;
+}
+.para{
+    margin-bottom: 10px;
+    font-size: 1em;
+    text-align: justify;
+}
+.skill{
+    padding: 10px;
+    background-color:white;
+    color: black;
+    border-color: black;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 5px 5px 5px 0px;
+    transition: background-color 0.8s ease, color 0.8s ease;
+}
+.skill:hover{
+    background-color: black;
+    color: white;
+}
+/*******************************************************This section is for the 'Project' Section *************************************************************/
+
+
+
+
+
+
+
+/************************** THis is a media query which fires when the screen size is reduced less than 638px ****************************************************/
+@media (max-width: 638px){
+    .sub-nav2 p{
+        display: none;
+    }
+    .sub-nav2{
+        width: max-content;
+    }
+    .side-bar-icon{
+        display: block;
+        height: 30px;
+        width: 30px;
+    }
+    .nav-bar{
+        height: 60px;
+    }
+    .head1 h1 {
+        word-wrap: break-word; /* Allow text to wrap to the next line */ 
+    }
+    .Sub-home{
+        justify-content: center;
+        margin: 100px auto;
+        width: max-content;
+    }
+    .head1{
+        justify-content: center;
+    }
+    .head1 h1 {
+        word-wrap: break-word; /* Allow text to wrap to the next line */ 
+    }
+    
+}
+@media (max-width: 818px){
+    .info-container{
+        flex-direction: column;
+    }
+    .info1{
+        max-width: 100%;
+        margin-right: 0;
+    }
+    
+
+}
