@@ -1,6 +1,6 @@
 *{
     margin: 0;
-    font-family: 'NewFont', sans-serif;  
+    font-family: 'Nunito', sans-serif;
     font-size: 1.1rem;
     color: black;
 }
@@ -21,6 +21,10 @@
     align-items: center;
     white-space: nowrap; /* New Learning- Prevent line breaks even when the screen with reduces. */
 }
+.sub-nav1 p {
+    font-size: 30px;
+    
+}
 .sub-nav2{
     display: flex;
     width: 400px;
@@ -30,7 +34,12 @@
 }
 .sub-nav2 p {
     cursor: pointer;
+    
 }
+.sub-nav2 a {
+    text-decoration: none;
+}
+
 .side-bar-icon{
     display: none;
 }
@@ -104,12 +113,14 @@ h1{
     color: white;
     cursor:pointer;
     transition: 0.8s;
-    
-    
+}
+.project-btn  a {
+    text-decoration: none;
+    color: white;
 }
 .project-btn:hover{
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;   
     border-radius: 10px;
     box-shadow: 10px white;
 }
@@ -232,6 +243,45 @@ h1{
     color: white;
     border-radius: 10px;
 }
+/******************************************************Below Section is for footer Div *****************************************/
+#footer {
+    height: max-content; 
+    background-color: black;
+    color: white;
+    padding: 20px; 
+    text-align: center; 
+    margin-top: 20px;
+}
+
+#footer p {
+    color: white;
+}
+
+#footer h3 {
+    color: white;
+}
+
+.subfoot1 {
+    width: 100%; 
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+.subfoot2 {
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+}
+.social-icon{
+    width: 2.2em;
+    height: 2.2em;
+    margin: 0 10px;
+}
+#icon-div{
+    margin-left: 30px;
+    margin-top: 15px;
+    height: max-content;
+}
 
 
 
@@ -239,9 +289,13 @@ h1{
 
 
 
-/************************** THis is a media query which fires when the screen size is reduced less than 638px ****************************************************/
+
+/************************** Below is a media query which fires when the screen size is reduced less than 638px ****************************************************/
 @media (max-width: 638px){
     .sub-nav2 p{
+        display: none;
+    }
+    .sub-nav2 a{
         display: none;
     }
     .sub-nav2{
@@ -271,6 +325,8 @@ h1{
     }
     
 }
+/************************** Below is a media query which fires when the screen size is reduced less than 818px ****************************************************/
+
 @media (max-width: 818px){
     .info-container{
         flex-direction: column;
@@ -297,7 +353,15 @@ h1{
         background-color: black;
         color: white;
         border-radius: 10px;
-
     }
-
+    .subfoot1{
+        text-align: center;
+    }
+    .subfoot2{
+        margin-top: 20px;
+    }
+    #icon-div{
+        margin-left: 0px;
+        margin-top: 15px;
+    }
 }
